@@ -21,8 +21,13 @@ body {
   margin-bottom: 60px;
 }
 
+
 div {
     text-align:center;
+    gap:10px;
+    margin:5px; 
+    padding: 10px
+    
 }
 
 
@@ -41,3 +46,128 @@ button:hover{
     
     background-color: yellow;
 }
+
+.profileCardGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .profileCardGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobil */
+@media (max-width: 600px) {
+    .profileCardGrid {
+        grid-template-columns: 1fr; 
+    }
+}
+
+.profileCard {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+
+.profileCard {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+
+.profile_img{
+    height:100px;
+    width:100px;
+    border-radius: 100%;
+    border: 2px solid black;
+
+}
+
+.btn_profile{
+    background-color: white;
+}
+
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden; 
+}
+
+th, td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: grey;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+tr:hover {
+    background-color: #f1f1f1; 
+}
+
+tr:last-child td {
+    border-bottom: none; 
+}
+
+
+.profileCard1 {
+    display: flex;
+    align-items: center; 
+    gap: 15px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    max-width: 400px; 
+}
+
+.profile_img1 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* spraví kruh */
+    object-fit: cover; /* oreže fotku, aby vyplnila kruh */
+    border: 2px solid black;
+}
+
+.profile_text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.btn_profile {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+    .btn_profile:hover {
+        background-color: aquamarine;
+    }
+
+
+
