@@ -169,7 +169,7 @@ tr:last-child td {
         background-color: aquamarine;
     }
 
-
+/*uloha7*/
 #box {
     width: 150px;
     height: 150px;
@@ -215,5 +215,68 @@ tr:last-child td {
     }
 
 
+/*uloha 8*/
+.counter-container {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 320px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    resize: none;
+}
+
+    textarea.invalid {
+        border-color: #ff4d4d;
+        box-shadow: 0 0 8px rgba(255, 77, 77, 0.5);
+    }
+
+    textarea.valid {
+        border-color: #4CAF50;
+        box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+    }
+
+#charCount {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+table {
+    border-collapse: collapse;
+    width: 60%;
+    margin-top: 15px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+th {
+    background-color: #007BFF;
+    color: white;
+    text-align: left;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(even) td {
+    background-color: #e6f0ff;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
 
 

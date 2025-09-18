@@ -24,3 +24,21 @@ function countClick() {
         box.style.backgroundColor = "lightgray";
     }
 }
+
+function countChars() {
+    const textarea = document.getElementById("textInput");
+    const charCount = document.getElementById("charCount");
+    const count = textarea.value.length;
+
+    charCount.textContent = `Minimálne 20 znakov, aktuálny počet znakov: ${count}`;
+
+    if (count < 20) {
+        textarea.classList.remove("valid");
+        textarea.classList.add("invalid");
+    } else {
+        textarea.classList.remove("invalid");
+        textarea.classList.add("valid");
+    }
+}
+
+

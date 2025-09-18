@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SNzgEFlHbzhMOYfJuTGN1g3LAemqNI6EuE71HlrJ1T4=",
+  "Hash": "jMPZR3NyDB5rmCnCTAW1oTSoQYqso2AtlV8Xjr1RLlk=",
   "Source": "WebApplication1",
   "BasePath": "_content/WebApplication1",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\photo-1615109398623-88346a601842.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\monik\\source\\repos\\MonikaRos\\apf_4roc\\apf_4roc_MonikaR_4D\\WebApplication1\\WebApplication1\\wwwroot\\js\\example.js",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\monik\\source\\repos\\MonikaRos\\apf_4roc\\apf_4roc_MonikaR_4D\\WebApplication1\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "js/example.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\example.js"
     },
     {
       "Identity": "C:\\Users\\monik\\source\\repos\\MonikaRos\\apf_4roc\\apf_4roc_MonikaR_4D\\WebApplication1\\WebApplication1\\wwwroot\\js\\site.js",

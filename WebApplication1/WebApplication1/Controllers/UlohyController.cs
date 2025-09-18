@@ -73,5 +73,15 @@ namespace WebApplication1.Controllers
             return View();
         }
 
+        public IActionResult Uloha8()
+        {
+            return View();
+        }
+
+        public IActionResult Uloha_json()
+        {
+            return View();
+        }
+
     }
 }

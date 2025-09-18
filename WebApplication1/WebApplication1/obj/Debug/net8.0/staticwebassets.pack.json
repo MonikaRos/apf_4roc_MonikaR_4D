@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\img\\photo-1615109398623-88346a601842.jpg"
     },
     {
+      "Id": "C:\\Users\\monik\\source\\repos\\MonikaRos\\apf_4roc\\apf_4roc_MonikaR_4D\\WebApplication1\\WebApplication1\\wwwroot\\js\\example.js",
+      "PackagePath": "staticwebassets\\js\\example.js"
+    },
+    {
       "Id": "C:\\Users\\monik\\source\\repos\\MonikaRos\\apf_4roc\\apf_4roc_MonikaR_4D\\WebApplication1\\WebApplication1\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
