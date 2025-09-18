@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\monik\\source\\repos\\MonikaRos\\apf_4roc\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectUniqueName": "C:\\Users\\monik\\source\\repos\\MonikaRos\\apf_4roc\\apf_4roc_MonikaR_4D\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
       "projectName": "WebApplication1",
-      "projectPath": "C:\\Users\\monik\\source\\repos\\MonikaRos\\apf_4roc\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+      "projectPath": "C:\\Users\\monik\\source\\repos\\MonikaRos\\apf_4roc\\apf_4roc_MonikaR_4D\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
       "packagesPath": "C:\\Users\\monik\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\monik\\source\\repos\\MonikaRos\\apf_4roc\\WebApplication1\\WebApplication1\\obj\\",
+      "outputPath": "C:\\Users\\monik\\source\\repos\\MonikaRos\\apf_4roc\\apf_4roc_MonikaR_4D\\WebApplication1\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\monik\\AppData\\Roaming\\NuGet\\NuGet.Config",

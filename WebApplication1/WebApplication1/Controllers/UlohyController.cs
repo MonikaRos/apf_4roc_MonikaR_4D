@@ -64,6 +64,10 @@ namespace WebApplication1.Controllers
             };
             return View(userInfoList);
         }
+        public IActionResult Uloha6()
+        {
+            return View();
+        }
 
     }
 }
