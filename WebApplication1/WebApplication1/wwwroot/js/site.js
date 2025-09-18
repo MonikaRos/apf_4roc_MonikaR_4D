@@ -11,3 +11,16 @@ function toggleText() {
         p.style.display = "none";
     }
 }
+
+let count = 0;
+function countClick() {
+    count++;
+    const box = document.getElementById("box");
+    box.textContent = count;
+
+    if (count >= 5) {
+        box.style.backgroundColor = "lightgreen";
+    } else {
+        box.style.backgroundColor = "lightgray";
+    }
+}

@@ -68,6 +68,10 @@ namespace WebApplication1.Controllers
         {
             return View();
         }
+        public IActionResult Uloha7()
+        {
+            return View();
+        }
 
     }
 }
