@@ -1,0 +1,41 @@
+﻿@model WebApplication1.Models.UserInfo
+
+@{
+    ViewData["Title"] = "User Form";
+}
+
+<h2>Vyplň formulár</h2>
+
+<form asp-action="UserForm" method="post">
+    <div>
+        <label>Meno</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div>
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" type="email" />
+    </div>
+
+    <div>
+        <label>Telefón</label>
+        <input asp-for="Telephone" class="form-control" />
+    </div>
+
+    <div>
+        <label>Používateľské meno</label>
+        <input asp-for="Username" class="form-control" />
+    </div>
+
+    <div>
+        <label>Vek</label>
+        <input asp-for="Age" class="form-control" type="number" />
+    </div>
+
+    <div>
+        <label>Adresa</label>
+        <input asp-for="Address" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Odoslať</button>
+</form>

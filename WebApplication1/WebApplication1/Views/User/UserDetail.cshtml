@@ -1,0 +1,16 @@
+﻿@model WebApplication1.Models.UserInfo
+
+@{
+    ViewData["Title"] = "User Detail";
+}
+
+<h2>Detaily používateľa</h2>
+
+<p><strong>Meno:</strong> @Model.Name</p>
+<p><strong>Email:</strong> @Model.Email</p>
+<p><strong>Telefón:</strong> @Model.Telephone</p>
+<p><strong>Používateľské meno:</strong> @Model.Username</p>
+<p><strong>Vek:</strong> @Model.Age</p>
+<p><strong>Adresa:</strong> @Model.Address</p>
+
+<a asp-action="UserForm" class="btn btn-secondary">Späť na formulár</a>
