@@ -130,3 +130,56 @@ function createTable() {
 
     container.innerHTML = table;
 }
+
+
+//user form subjects
+const addSubjectBtn = document.getElementById("addSubjectBtn");
+const subjectForm = document.getElementById("subjectForm");
+const saveSubjectBtn = document.getElementById("saveSubjectBtn");
+const cancelSubjectBtn = document.getElementById("cancelSubjectBtn");
+const subjectsContainer = document.getElementById("subjectsContainer");
+const form = document.querySelector(".user-form");
+
+addSubjectBtn.addEventListener("click", () => {
+    subjectForm.style.display = "block";
+});
+
+cancelSubjectBtn.addEventListener("click", () => {
+    subjectForm.style.display = "none";
+});
+
+saveSubjectBtn.addEventListener("click", () => {
+    const name = document.getElementById("subName").value;
+    const teacher = document.getElementById("subTeacher").value;
+    const grade = document.getElementById("subGrade").value;
+    const room = document.getElementById("subRoom").value;
+    const image = document.getElementById("subImage").value;
+
+    if (name) {
+        const card = document.createElement("div");
+        card.className = "subject-card";
+        card.innerHTML = `
+                    <p><strong>${name}</strong></p>
+                    <p>Učiteľ: ${teacher}</p>
+                    <p>Známka: ${grade}</p>
+                    <p>Učebňa: ${room}</p>
+                    ${image ? `<img src="${image}" alt="${name}" class="subject-img" />` : ''}
+                `;
+        subjectsContainer.appendChild(card);
+
+        ["Name", "Teacher", "Grade", "Room", "ImageUrl"].forEach(field => {
+            const hidden = document.createElement("input");
+            hidden.type = "hidden";
+            hidden.name = `Subjects[${subjectsContainer.children.length - 1}].${field}`;
+            hidden.value = eval(field.toLowerCase());
+            form.appendChild(hidden);
+        });
+
+        subjectForm.style.display = "none";
+        document.getElementById("subName").value = "";
+        document.getElementById("subTeacher").value = "";
+        document.getElementById("subGrade").value = "";
+        document.getElementById("subRoom").value = "";
+        document.getElementById("subImage").value = "";
+    }
+});

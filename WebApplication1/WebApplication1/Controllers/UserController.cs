@@ -1,10 +1,14 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Models;
+using System.Collections.Generic;
 
 namespace WebApplication1.Controllers
 {
     public class UserController : Controller
     {
+        
+        private static List<UserInfo> userList { get; set; } = new List<UserInfo>();
+
         [HttpGet]
         public IActionResult UserForm()
         {
@@ -14,23 +18,20 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public IActionResult UserForm(UserInfo user)
         {
-            return RedirectToAction("UserDetail", user);
+            if (ModelState.IsValid)
+            {
+                userList.Add(user);
+                return RedirectToAction("UserDetail");
+            }
+
+            return View(user);
         }
 
         [HttpGet]
-        public IActionResult UserDetail(string name, string email, string telephone, string username, int age, string address)
+        public IActionResult UserDetail()
         {
-            var model = new UserInfo
-            {
-                Name = name,
-                Email = email,
-                Telephone = telephone,
-                Username = username,
-                Age = age,
-                Address = address
-            };
-
-            return View(model);
+            
+            return View(userList);
         }
     }
 }

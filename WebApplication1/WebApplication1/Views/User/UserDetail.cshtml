@@ -1,16 +1,37 @@
-﻿@model WebApplication1.Models.UserInfo
+﻿@model List<WebApplication1.Models.UserInfo>
 
-@{
-    ViewData["Title"] = "User Detail";
-}
+<h2 class="page-title">Vitajte všetci používatelia</h2>
 
-<h2>Detaily používateľa</h2>
+<div class="user-detail-container">
+    @foreach (var user in Model)
+    {
+        <div class="user-card">
+            <p class="welcome-text">Vitaj @user.Name!</p>
+            <p><strong>Email:</strong> @user.Email</p>
+            <p><strong>Telefón:</strong> @user.Telephone</p>
+            <p><strong>Používateľské meno:</strong> @user.Username</p>
+            <p><strong>Vek:</strong> @user.Age</p>
+            <p><strong>Adresa:</strong> @user.Address</p>
 
-<p><strong>Meno:</strong> @Model.Name</p>
-<p><strong>Email:</strong> @Model.Email</p>
-<p><strong>Telefón:</strong> @Model.Telephone</p>
-<p><strong>Používateľské meno:</strong> @Model.Username</p>
-<p><strong>Vek:</strong> @Model.Age</p>
-<p><strong>Adresa:</strong> @Model.Address</p>
-
-<a asp-action="UserForm" class="btn btn-secondary">Späť na formulár</a>
+            @if (user.Subjects.Any())
+            {
+                <p><strong>Predmety:</strong></p>
+                <div class="subjects-container">
+                    @foreach (var sub in user.Subjects)
+                    {
+                        <div class="subject-card">
+                            <p><strong>@sub.Name</strong></p>
+                            <p>Učiteľ: @sub.Teacher</p>
+                            <p>Známka: @sub.Grade</p>
+                            <p>Učebňa: @sub.Room</p>
+                            @if (!string.IsNullOrEmpty(sub.ImageUrl))
+                            {
+                                <img src="@sub.ImageUrl" class="subject-img" />
+                            }
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    }
+</div>

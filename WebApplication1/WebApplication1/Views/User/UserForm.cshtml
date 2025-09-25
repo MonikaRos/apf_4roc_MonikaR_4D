@@ -1,41 +1,61 @@
 ﻿@model WebApplication1.Models.UserInfo
 
-@{
-    ViewData["Title"] = "User Form";
-}
+<h2 class="page-title">Vyplň formulár</h2>
 
-<h2>Vyplň formulár</h2>
-
-<form asp-action="UserForm" method="post">
-    <div>
-        <label>Meno</label>
+<form asp-action="UserForm" method="post" class="user-form">
+    <div class="form-group">
+        <label class="form-label">Meno</label>
         <input asp-for="Name" class="form-control" />
     </div>
 
-    <div>
-        <label>Email</label>
+    <div class="form-group">
+        <label class="form-label">Email</label>
         <input asp-for="Email" class="form-control" type="email" />
     </div>
 
-    <div>
-        <label>Telefón</label>
+    <div class="form-group">
+        <label class="form-label">Telefón</label>
         <input asp-for="Telephone" class="form-control" />
     </div>
 
-    <div>
-        <label>Používateľské meno</label>
+    <div class="form-group">
+        <label class="form-label">Používateľské meno</label>
         <input asp-for="Username" class="form-control" />
     </div>
 
-    <div>
-        <label>Vek</label>
+    <div class="form-group">
+        <label class="form-label">Vek</label>
         <input asp-for="Age" class="form-control" type="number" />
     </div>
 
-    <div>
-        <label>Adresa</label>
+    <div class="form-group">
+        <label class="form-label">Adresa</label>
         <input asp-for="Address" class="form-control" />
     </div>
 
-    <button type="submit" class="btn btn-primary mt-3">Odoslať</button>
+    <div class="form-group">
+        <label class="form-label">Predmety</label>
+        <button type="button" id="addSubjectBtn" class="btn-primary">Pridať predmet</button>
+    </div>
+    <div id="subjectForm" class="subject-form" style="display:none;">
+        <input type="text" id="subName" placeholder="Názov predmetu" class="form-control" />
+        <input type="text" id="subTeacher" placeholder="Učiteľ" class="form-control" />
+        <input type="number" id="subGrade" placeholder="Známka" class="form-control" />
+        <input type="text" id="subRoom" placeholder="Učebňa" class="form-control" />
+        <input type="text" id="subImage" placeholder="URL obrázku" class="form-control" />
+        <div style="margin-top:5px;">
+            <button type="button" id="saveSubjectBtn" class="btn-primary">Uložiť</button>
+            <button type="button" id="cancelSubjectBtn" class="btn-secondary">Zrušiť</button>
+        </div>
+    </div>
+
+
+    <div id="subjectsContainer" class="subjects-container"></div>
+
+    <button type="submit" class="btn-primary">Odoslať</button>
 </form>
+
+
+
+
+
