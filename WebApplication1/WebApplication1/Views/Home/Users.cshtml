@@ -1,0 +1,28 @@
+﻿@using UserApp.DataLayer.Entities
+
+@model List<UserEntity>
+
+<table>
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Email</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var user in Model)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>
+                    <a href="@Url.Action("UserDetail", "Home", new { UserPublicId = user.PublicId})">
+                    @user.Name
+                    </a>
+                </td>
+
+                <td>@user.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>
