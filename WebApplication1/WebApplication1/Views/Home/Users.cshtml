@@ -1,28 +1,40 @@
 ﻿@using UserApp.DataLayer.Entities
-
 @model List<UserEntity>
 
-<table>
+<h2>Users</h2>
+
+<table class="table">
     <thead>
         <tr>
-            <td>Id</td>
-            <td>Name</td>
-            <td>Email</td>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
-        @foreach(var user in Model)
+        @foreach (var user in Model)
         {
             <tr>
                 <td>@user.Id</td>
                 <td>
-                    <a href="@Url.Action("UserDetail", "Home", new { UserPublicId = user.PublicId})">
-                    @user.Name
+                    <a href="@Url.Action("UserDetail", "Home", new { UserPublicId = user.PublicId })">
+                        @user.Name
                     </a>
                 </td>
-
                 <td>@user.Email</td>
+                <td>
+                    <a class="btn btn-warning btn-sm" href="@Url.Action("EditUser", "Home", new { userPublicId = user.PublicId })">Edit</a>
+
+                    <form asp-action="DeleteUser" asp-route-userPublicId="@user.PublicId" method="post" style="display:inline;">
+                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Naozaj chceš odstrániť tohto používateľa?');">
+                            Delete
+                        </button>
+                    </form>
+                </td>
             </tr>
         }
     </tbody>
 </table>
+
+<a class="btn btn-success" href="@Url.Action("CreateUser", "Home")">+ Create New User</a>

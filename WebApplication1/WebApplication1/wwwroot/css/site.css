@@ -262,8 +262,8 @@ table {
 }
 
 th {
-    background-color: #007BFF;
-    color: white;
+    background-color: cornflowerblue;
+    color: black;
     text-align: left;
 }
 
@@ -437,3 +437,30 @@ table, th, td {
     .subject-form input {
         margin-bottom: 5px;
     }
+
+/* Štýly špecifické len pre UserDetail stránku */
+#user-detail-page h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#user-detail-page h2 {
+    font-size: 1.5rem;
+    color: #34495e;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #bdc3c7;
+    padding-bottom: 5px;
+}
+
+#user-detail-page p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+#user-detail-page .btn {
+    margin-top: 20px;
+}

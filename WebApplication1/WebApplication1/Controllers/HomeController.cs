@@ -1,10 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 using WebApplication1.Models;
 using UserApp.DataLayer.Entities;
-using SQLitePCL;
 using UserApp.datalayer;
-
+using System.Diagnostics;
 
 namespace WebApplication1.Controllers
 {
@@ -15,25 +13,31 @@ namespace WebApplication1.Controllers
 
         public HomeController(ILogger<HomeController> logger, AppDbContext context)
         {
-            
             _logger = logger;
             _context = context;
         }
 
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+
         public IActionResult Users()
         {
-            var userList = _context.Users.ToList();
-            
-            return View(userList);
+            var users = _context.Users.ToList();
+            return View(users);
         }
 
         public IActionResult UserDetail(Guid userPublicId)
         {
             var user = _context.Users.FirstOrDefault(u => u.PublicId == userPublicId);
+            if (user == null)
+                return NotFound();
+
             return View(user);
         }
-
-
 
         [HttpGet]
         public IActionResult CreateUser()
@@ -48,7 +52,7 @@ namespace WebApplication1.Controllers
             {
                 var newUser = new UserEntity
                 {
-                    PublicId = Guid.NewGuid(), 
+                    PublicId = Guid.NewGuid(),
                     Name = model.Name,
                     Email = model.Email
                 };
@@ -63,14 +67,56 @@ namespace WebApplication1.Controllers
         }
 
 
-
-        public IActionResult Index()
+        [HttpGet]
+        public IActionResult EditUser(Guid userPublicId)
         {
-            return View();
+            var user = _context.Users.FirstOrDefault(u => u.PublicId == userPublicId);
+            if (user == null)
+                return NotFound();
+
+            ViewBag.UserPublicId = user.PublicId;
+
+            var model = new CreateUserModel
+            {
+                Name = user.Name,
+                Email = user.Email
+            };
+
+            return View(model);
         }
 
+        [HttpPost]
+        public IActionResult EditUser(Guid userPublicId, CreateUserModel model)
+        {
+            var user = _context.Users.FirstOrDefault(u => u.PublicId == userPublicId);
+            if (user == null)
+                return NotFound();
 
+            if (ModelState.IsValid)
+            {
+                user.Email = model.Email; 
+                _context.SaveChanges();
+                return RedirectToAction("Users");
+            }
 
+            return View(model);
+        }
+
+        
+        [HttpPost]
+        public IActionResult DeleteUser(Guid userPublicId)
+        {
+            var user = _context.Users.FirstOrDefault(u => u.PublicId == userPublicId);
+            if (user != null)
+            {
+                _context.Users.Remove(user);
+                _context.SaveChanges();
+            }
+
+            return RedirectToAction("Users");
+        }
+
+        
         public IActionResult Privacy()
         {
             return View();

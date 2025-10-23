@@ -1,0 +1,15 @@
+C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\UserApp.datalayer\bin\Debug\net8.0\UserApp.DataLayer.deps.json
+C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\UserApp.datalayer\bin\Debug\net8.0\UserApp.DataLayer.runtimeconfig.json
+C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\UserApp.datalayer\bin\Debug\net8.0\UserApp.DataLayer.dll
+C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\UserApp.datalayer\bin\Debug\net8.0\UserApp.DataLayer.pdb
+C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\UserApp.datalayer\obj\Debug\net8.0\UserApp.DataLayer.csproj.AssemblyReference.cache
+C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\UserApp.datalayer\obj\Debug\net8.0\UserApp.DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\UserApp.datalayer\obj\Debug\net8.0\UserApp.DataLayer.AssemblyInfoInputs.cache
+C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\UserApp.datalayer\obj\Debug\net8.0\UserApp.DataLayer.AssemblyInfo.cs
+C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\UserApp.datalayer\obj\Debug\net8.0\UserApp.DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\UserApp.datalayer\obj\Debug\net8.0\UserApp.DataLayer.sourcelink.json
+C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\UserApp.datalayer\obj\Debug\net8.0\UserApp.DataLayer.dll
+C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\UserApp.datalayer\obj\Debug\net8.0\refint\UserApp.DataLayer.dll
+C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\UserApp.datalayer\obj\Debug\net8.0\UserApp.DataLayer.pdb
+C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\UserApp.datalayer\obj\Debug\net8.0\UserApp.DataLayer.genruntimeconfig.cache
+C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\UserApp.datalayer\obj\Debug\net8.0\ref\UserApp.DataLayer.dll

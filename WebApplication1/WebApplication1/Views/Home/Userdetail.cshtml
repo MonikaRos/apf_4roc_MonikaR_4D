@@ -1,6 +1,12 @@
-﻿@using UserApp.DataLayer.Entities
+﻿@model UserApp.DataLayer.Entities.UserEntity
 
-@model UserEntity
+<div id="user-detail-page">
+    <h1>@Model.Name</h1>
+    <h2>Email</h2>
+    <p>@Model.Email</p>
 
-<h1>@Model.Id @Model.Name</h1>
-<h2>@Model.Email</h2>
+    <h2>Public ID</h2>
+    <p>@Model.PublicId</p>
+
+    <a class="btn btn-secondary" href="@Url.Action("Users", "Home")">Back to Users</a>
+</div>
