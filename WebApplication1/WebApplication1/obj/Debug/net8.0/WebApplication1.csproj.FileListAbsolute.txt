@@ -193,3 +193,7 @@ C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplicatio
 C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\WebApplication1\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\WebApplication1\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\WebApplication1\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\WebApplication1\bin\Debug\net8.0\BusinessLayer.dll
+C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\WebApplication1\bin\Debug\net8.0\Common.dll
+C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\WebApplication1\bin\Debug\net8.0\BusinessLayer.pdb
+C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\WebApplication1\bin\Debug\net8.0\Common.pdb

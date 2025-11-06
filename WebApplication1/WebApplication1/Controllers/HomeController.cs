@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using WebApplication1.Models;
-using UserApp.DataLayer.Entities;
-using UserApp.datalayer;
+using BusinessLayer.Inerfaces.Services;
+using Common.Models;
 using System.Diagnostics;
 
 namespace WebApplication1.Controllers
@@ -9,30 +9,28 @@ namespace WebApplication1.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly AppDbContext _context;
+        private readonly IUserService _userService;
 
-        public HomeController(ILogger<HomeController> logger, AppDbContext context)
+        public HomeController(ILogger<HomeController> logger, IUserService userService)
         {
             _logger = logger;
-            _context = context;
+            _userService = userService;
         }
-
 
         public IActionResult Index()
         {
             return View();
         }
 
-
-        public IActionResult Users()
+        public async Task<IActionResult> Users()
         {
-            var users = _context.Users.ToList();
+            var users = await _userService.GetAllAsync();
             return View(users);
         }
 
-        public IActionResult UserDetail(Guid userPublicId)
+        public async Task<IActionResult> UserDetail(Guid userPublicId)
         {
-            var user = _context.Users.FirstOrDefault(u => u.PublicId == userPublicId);
+            var user = await _userService.GetByPublicIdAsync(userPublicId);
             if (user == null)
                 return NotFound();
 
@@ -46,35 +44,33 @@ namespace WebApplication1.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateUser(CreateUserModel model)
+        public async Task<IActionResult> CreateUser(CreateUserModel model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
+                return View(model);
+
+            var dto = new UserDTO
             {
-                var newUser = new UserEntity
-                {
-                    PublicId = Guid.NewGuid(),
-                    Name = model.Name,
-                    Email = model.Email
-                };
+                Name = model.Name,
+                Email = model.Email
+            };
 
-                _context.Users.Add(newUser);
-                _context.SaveChanges();
-
-                return RedirectToAction("Users");
+            var success = await _userService.CreateAsync(dto);
+            if (!success)
+            {
+                ModelState.AddModelError("", "Nepodarilo sa vytvoriù pouûÌvateæa.");
+                return View(model);
             }
 
-            return View(model);
+            return RedirectToAction("Users");
         }
 
-
         [HttpGet]
-        public IActionResult EditUser(Guid userPublicId)
+        public async Task<IActionResult> EditUser(Guid userPublicId)
         {
-            var user = _context.Users.FirstOrDefault(u => u.PublicId == userPublicId);
+            var user = await _userService.GetByPublicIdAsync(userPublicId);
             if (user == null)
                 return NotFound();
-
-            ViewBag.UserPublicId = user.PublicId;
 
             var model = new CreateUserModel
             {
@@ -82,41 +78,34 @@ namespace WebApplication1.Controllers
                 Email = user.Email
             };
 
+            ViewBag.UserPublicId = userPublicId;
             return View(model);
         }
 
         [HttpPost]
-        public IActionResult EditUser(Guid userPublicId, CreateUserModel model)
+        public async Task<IActionResult> EditUser(Guid userPublicId, CreateUserModel model)
         {
-            var user = _context.Users.FirstOrDefault(u => u.PublicId == userPublicId);
-            if (user == null)
-                return NotFound();
+            if (!ModelState.IsValid)
+                return View(model);
 
-            if (ModelState.IsValid)
+            var dto = new UserDTO
             {
-                user.Email = model.Email; 
-                _context.SaveChanges();
-                return RedirectToAction("Users");
-            }
+                PublicId = userPublicId,
+                Name = model.Name,
+                Email = model.Email
+            };
 
-            return View(model);
-        }
-
-        
-        [HttpPost]
-        public IActionResult DeleteUser(Guid userPublicId)
-        {
-            var user = _context.Users.FirstOrDefault(u => u.PublicId == userPublicId);
-            if (user != null)
-            {
-                _context.Users.Remove(user);
-                _context.SaveChanges();
-            }
-
+            await _userService.UpdateAsync(dto);
             return RedirectToAction("Users");
         }
 
-        
+        [HttpPost]
+        public async Task<IActionResult> DeleteUser(Guid userPublicId)
+        {
+            await _userService.DeleteAsync(userPublicId);
+            return RedirectToAction("Users");
+        }
+
         public IActionResult Privacy()
         {
             return View();
