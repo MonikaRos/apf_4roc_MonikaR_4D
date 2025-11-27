@@ -106,6 +106,22 @@ namespace WebApplication1.Controllers
             return RedirectToAction("Users");
         }
 
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteSelected(List<Guid> selectedIds)
+        {
+            if (selectedIds != null && selectedIds.Any())
+            {
+                foreach (var id in selectedIds)
+                {
+                    await _userService.DeleteAsync(id);
+                }
+            }
+
+            return RedirectToAction("Users");
+        }
+
+
         public IActionResult Privacy()
         {
             return View();
