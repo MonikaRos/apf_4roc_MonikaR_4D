@@ -68,7 +68,7 @@ namespace BusinessLayer.Services
         
         public async Task<bool> CreateAsync(UserDTO model)
         {
-            var entity = new UserEntity
+            var entity = new User
             {
                 PublicId = Guid.NewGuid(),
                 Name = model.Name,

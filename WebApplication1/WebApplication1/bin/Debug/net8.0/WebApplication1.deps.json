@@ -830,6 +830,9 @@
         }
       },
       "Common/1.0.0": {
+        "dependencies": {
+          "UserApp.DataLayer": "1.0.0"
+        },
         "runtime": {
           "Common.dll": {
             "assemblyVersion": "1.0.0.0",

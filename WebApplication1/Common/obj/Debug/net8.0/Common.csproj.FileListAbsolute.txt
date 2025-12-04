@@ -10,3 +10,7 @@ C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplicatio
 C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\Common\obj\Debug\net8.0\refint\Common.dll
 C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\Common\obj\Debug\net8.0\Common.pdb
 C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\Common\obj\Debug\net8.0\ref\Common.dll
+C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\Common\bin\Debug\net8.0\UserApp.DataLayer.dll
+C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\Common\bin\Debug\net8.0\UserApp.DataLayer.pdb
+C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\Common\obj\Debug\net8.0\Common.csproj.AssemblyReference.cache
+C:\Users\monik\source\repos\MonikaRos\apf_4roc\apf_4roc_MonikaR_4D\WebApplication1\Common\obj\Debug\net8.0\Common.csproj.Up2Date

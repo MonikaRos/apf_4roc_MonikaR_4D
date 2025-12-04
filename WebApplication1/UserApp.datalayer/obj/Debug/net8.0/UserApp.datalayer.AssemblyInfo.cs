@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UserApp.DataLayer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa59922a04767c0fd4f213e0daaaf7279e5634a8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e7cecafbfd840b68404f7778a32f40d7832f49d")]
 [assembly: System.Reflection.AssemblyProductAttribute("UserApp.DataLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UserApp.DataLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

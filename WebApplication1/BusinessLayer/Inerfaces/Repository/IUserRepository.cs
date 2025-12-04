@@ -7,8 +7,8 @@ using UserApp.DataLayer.Entities;
 
 namespace BusinessLayer.Inerfaces.Repository
 {
-    public interface IUserRepository : IBaseRepository<UserEntity>
+    public interface IUserRepository : IBaseRepository<User>
     {
-        Task<UserEntity?> GetByEmailAsync(string emial);
+        Task<User?> GetByEmailAsync(string emial);
     }
 }

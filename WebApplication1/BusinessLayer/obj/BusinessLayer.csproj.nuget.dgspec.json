@@ -103,7 +103,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\monik\\source\\repos\\MonikaRos\\apf_4roc\\apf_4roc_MonikaR_4D\\WebApplication1\\UserApp.datalayer\\UserApp.DataLayer.csproj": {
+                "projectPath": "C:\\Users\\monik\\source\\repos\\MonikaRos\\apf_4roc\\apf_4roc_MonikaR_4D\\WebApplication1\\UserApp.datalayer\\UserApp.DataLayer.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

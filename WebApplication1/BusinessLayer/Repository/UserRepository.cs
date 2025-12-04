@@ -10,7 +10,7 @@ using UserApp.DataLayer.Entities;
 
 namespace BusinessLayer.Repository
 {
-    public class UserRepository : BaseRepository<UserEntity>, IUserRepository
+    public class UserRepository : BaseRepository<User>, IUserRepository
     {
         private readonly AppDbContext _context;
 
@@ -19,12 +19,12 @@ namespace BusinessLayer.Repository
             _context = context; 
         }
 
-        public async Task<UserEntity?> GetByEmailAsync(string email)
+        public async Task<User?> GetByEmailAsync(string email)
         {
             return await _context.Users.FirstOrDefaultAsync(e => e.Email == email);
         }
 
-        public async Task<List<UserEntity>> GetAll()
+        public async Task<List<User>> GetAll()
         {
             return await _context.Users.ToListAsync();
         }
